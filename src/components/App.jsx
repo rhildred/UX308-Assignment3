@@ -2,12 +2,12 @@ import {
   View,
 } from 'react-native';
 
-import ChatView from "./ChatView"
+import Loyalty from "./Loyalty"
 
 export default function App() {
   return (
     <View>
-      <ChatView />
+      <Loyalty />
     </View>
   );
 }
