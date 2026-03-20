@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { FAB, Portal, Dialog, Button, Text, PaperProvider } from 'react-native-paper';
+import ChatView from "./ChatView";
 
 export default function App() {
     const [visible, setVisible] = useState(false);
@@ -11,9 +12,9 @@ export default function App() {
                 Hello from Rich
                 <Portal>
                     <Dialog visible={visible} onDismiss={() => setVisible(false)}>
-                        <Dialog.Title>Vite + Web Dialog</Dialog.Title>
+                        <Dialog.Title>Order Bot</Dialog.Title>
                         <Dialog.Content>
-                            <Text>This dialog is rendered via a Portal, ensuring it floats above the FAB.</Text>
+                            <ChatView />
                         </Dialog.Content>
                         <Dialog.Actions>
                             <Button onPress={() => setVisible(false)}>Dismiss</Button>
